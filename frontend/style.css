@@ -1,0 +1,103 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(220, 220, 220, 0.5);
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.wrapper {
+    background-color: white;
+    height: auto;
+    padding: 40px;
+    border-radius: 50px;
+    width: 500px;
+    backdrop-filter: blur(7px) brightness(95%);
+    box-shadow: 0 0 40px rgba(0, 0, 0, .5);
+    border: 2px solid rgba(255, 255, 255, .5);
+}
+
+.logo1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#img{
+    width: 250px;
+    height: auto;
+    background-color: transparent;
+}
+
+h2{
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label{
+    align-self: flex-start;
+    margin-top: 20px;
+    margin-left: 40px;
+}
+
+input {
+    width: 80%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button{
+    margin-top: 20px;
+    width: 100px;
+    padding: 10px;
+    background-color: #eee8e8;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #cacaca;
+}
+
+.login-cadastrar{
+    margin-top: 50px;
+    color: rgb(53, 52, 52);
+}
+
+.login-cadastrar:hover{
+    color: #1E90FF;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    padding: 10px 0;
+}
+
+.footer p {
+    color: #4a4a4a;
+    font-size: 14px;
+    margin: 0;
+}
