@@ -168,8 +168,8 @@ main {
 }
 
 label {
-    margin-left: 7px;
-    margin-bottom: 2px;
+    margin-left: 5px;
+    margin-bottom: 3px;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -182,7 +182,7 @@ input {
 }
 
 input::placeholder {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 }
 
 .wrapper {
