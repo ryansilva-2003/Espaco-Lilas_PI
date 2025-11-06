@@ -1,7 +1,6 @@
 package com.espacolilas.espacolilas.model;
 
 import jakarta.persistence.*;
-import jakarta.persistence.criteria.CriteriaBuilder;
 import jakarta.validation.constraints.Email;
 import java.time.LocalDate;
 
@@ -16,6 +15,9 @@ public class Paciente {
 
     @Column (name = "nome", length = 100, nullable = false)
     private String nome;
+
+    @Column (name = "cpf", length = 14, nullable = false)
+    private String cpf;
 
     @Email(message = "Esse email deve ser válido")
     @Column (name = "email", length = 100, nullable = false)

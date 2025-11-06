@@ -1,7 +1,7 @@
 package com.espacolilas.espacolilas.controller;
 
 import com.espacolilas.espacolilas.model.Paciente;
-import com.espacolilas.espacolilas.repository.PacienteRepository;
+import com.espacolilas.espacolilas.service.PacienteService;
 import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,31 +11,31 @@ import java.util.List;
 @RequestMapping("/pacientes")
 public class PacienteController {
 
-    private final PacienteRepository pacienteRepository;
+    private final PacienteService pacienteService;
 
-    public PacienteController(PacienteRepository pacienteRepository) {
-        this.pacienteRepository = pacienteRepository;
+    public PacienteController(PacienteService pacienteService) {
+        this.pacienteService = pacienteService;
     }
 
     @GetMapping
     public List<Paciente> listar() {
-        return pacienteRepository.findAll();
+        //return pacienteService.findAll();
     }
 
     @PostMapping
     public Paciente criar(@RequestBody @Valid Paciente paciente) {
-        return pacienteRepository.save(paciente);
+       // return pacienteService.save(paciente);
     }
 
     @PutMapping("/{id}")
     public Paciente atualizar(@PathVariable Integer id, @RequestBody Paciente paciente) {
         paciente.setId(id);
-        return pacienteRepository.save(paciente);
+       // return pacienteService.save(paciente);
     }
 
     @DeleteMapping("/{id}")
     public void deletar(@PathVariable Integer id) {
-        pacienteRepository.deleteById(id);
+       // pacienteService.deleteById(id);
     }
 }
 

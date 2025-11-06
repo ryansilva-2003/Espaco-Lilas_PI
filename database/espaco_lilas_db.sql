@@ -61,10 +61,11 @@ CREATE TABLE `consumo_atendimento` (
 --
 
 CREATE TABLE `pacientes` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(100) NOT NULL,
+  `cpf` varchar(14) NOT NULL,
   `email` varchar(100) NOT NULL,
-  `telefone` int(15) NOT NULL,
+  `telefone` varchar(20) NOT NULL,
   `data_nascimento` date NOT NULL,
   `sexo` varchar(1) NOT NULL,
   `observacoes` varchar(500) DEFAULT NULL
@@ -106,9 +107,13 @@ CREATE TABLE `produtos` (
 --
 
 CREATE TABLE `profissionais` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(100) NOT NULL,
-  `especialidade` varchar(30) NOT NULL
+  `cpf` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `telefone` varchar(100) NOT NULL,
+  `especialidade` varchar(30) NOT NULL,
+  `salario` decimal(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
