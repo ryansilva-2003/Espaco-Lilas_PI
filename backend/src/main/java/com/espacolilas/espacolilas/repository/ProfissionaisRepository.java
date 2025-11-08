@@ -11,5 +11,4 @@ public interface ProfissionaisRepository extends JpaRepository<Profissionais, In
 
     List<Profissionais> findByNomeContainingIgnoreCase(String nome);
     boolean existsByCpf(String cpf);
-    boolean existsByEmail(String email);
 }

@@ -6,18 +6,18 @@ import jakarta.persistence.*;
 import java.math.BigDecimal;
 
 @Entity
-@Table (name = "pofissionais")
+@Table (name = "profissionais")
 public class Profissionais {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column (name = "id", nullable = false)
+    @Column(name = "id", nullable = false)
     private Integer id;
 
     @Column (name = "nome", nullable = false)
     private String nome;
 
-    @Column (name = "cpf", nullable = false)
+    @Column (name = "cpf", length = 14, nullable = false)
     private String cpf;
 
     @Column (name = "email", length = 100, nullable = false)
@@ -46,6 +46,14 @@ public class Profissionais {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public String getCpf(){
+        return cpf;
+    }
+
+    public void setCpf(String cpf){
+        this.cpf = cpf;
     }
 
     public String getEmail() {

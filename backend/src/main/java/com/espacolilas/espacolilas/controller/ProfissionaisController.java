@@ -23,27 +23,19 @@ public class ProfissionaisController {
         return ResponseEntity.ok(profissionaisService.listarTodos());
     }
 
-    @GetMapping("/{id}")
-    public ResponseEntity<Profissionais> buscar(@PathVariable Integer id) {
-        return profissionaisService.buscarPorId(id)
-                .map(ResponseEntity::ok)
-                .orElse(ResponseEntity.notFound().build());
-    }
-
     @GetMapping("/buscar")
     public ResponseEntity<List<Profissionais>> buscarPorNome(@RequestParam String nome) {
         return ResponseEntity.ok(profissionaisService.buscarPorNome(nome));
     }
 
     @PostMapping
-    public ResponseEntity<Profissionais> criar(@RequestBody Profissionais profissional) {
-        return ResponseEntity.ok(profissionaisService.salvar(profissional));
+    public ResponseEntity<Profissionais> criar(@RequestBody Profissionais profissionais) {
+        return ResponseEntity.ok(profissionaisService.salvar(profissionais));
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Profissionais> atualizar(@PathVariable Integer id,
-                                                   @RequestBody Profissionais profissional) {
-        return ResponseEntity.ok(profissionaisService.atualizar(id, profissional));
+    public ResponseEntity<Profissionais> atualizar(@PathVariable Integer id, @RequestBody Profissionais profissionais) {
+        return ResponseEntity.ok(profissionaisService.atualizar(id, profissionais));
     }
 
     @DeleteMapping("/{id}")

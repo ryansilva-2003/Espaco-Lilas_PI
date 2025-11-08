@@ -23,13 +23,13 @@ public class Paciente {
     @Column (name = "email", length = 100, nullable = false)
     private String email;
 
-    @Column (name = "telefone", length = 15, nullable = false)
+    @Column (name = "telefone", length = 20, nullable = false)
     private String telefone;
 
     @Column (name = "data_nascimento", nullable = false)
     private LocalDate data_nascimento;
 
-    @Column (name = "sexo")
+    @Column (name = "sexo", nullable = false)
     private String sexo;
 
     @Column (name = "observacoes", length = 500)
@@ -49,6 +49,14 @@ public class Paciente {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public String getCpf(){
+        return cpf;
+    }
+
+    public void setCpf (String cpf) {
+        this.cpf = cpf;
     }
 
     public String getEmail() {

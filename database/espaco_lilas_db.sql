@@ -28,17 +28,18 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `agendamentos` (
-  `id_agendamento` int(11) NOT NULL,
-  `id_paciente` int(11) NOT NULL,
-  `id_profissional` int(11) NOT NULL,
-  `id_procedimento` int(11) NOT NULL,
+  `id_agendamentos` int(11) NOT NULL AUTO_INCREMENT,
+  `id_pacientes` int(11) NOT NULL,
+  `id_procedimentos` int(11) NOT NULL,
+  `id_profissionais` int(11) NOT NULL,
   `data` date NOT NULL,
   `hora_inicio` time NOT NULL,
   `hora_fim` time NOT NULL,
   `tipo_atendimento` varchar(100) NOT NULL,
   `etapa_atendimento` varchar(100) DEFAULT NULL,
   `observacoes` varchar(255) DEFAULT NULL,
-  `status` varchar(30) NOT NULL DEFAULT 'agendado'
+  `status` varchar(30) NOT NULL DEFAULT 'agendado',
+  `valor` decimal(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -48,7 +49,7 @@ CREATE TABLE `agendamentos` (
 --
 
 CREATE TABLE `consumo_atendimento` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `id_agendamento` int(11) NOT NULL,
   `id_produto` int(11) NOT NULL,
   `qtde_usada` int(11) NOT NULL
@@ -68,7 +69,8 @@ CREATE TABLE `pacientes` (
   `telefone` varchar(20) NOT NULL,
   `data_nascimento` date NOT NULL,
   `sexo` varchar(1) NOT NULL,
-  `observacoes` varchar(500) DEFAULT NULL
+  `observacoes` varchar(500) DEFAULT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -78,11 +80,12 @@ CREATE TABLE `pacientes` (
 --
 
 CREATE TABLE `procedimentos` (
-  `id` int(11) NOT NULL,
-  `nome` varchar(100) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(500) NOT NULL,
   `descricao` varchar(500) NOT NULL,
   `valor_base` decimal(8,2) NOT NULL,
-  `qtde_sessoes` int(8) NOT NULL
+  `qtde_sessoes` int(8) NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -92,7 +95,7 @@ CREATE TABLE `procedimentos` (
 --
 
 CREATE TABLE `produtos` (
-  `id` int(8) NOT NULL,
+  `id` int(8) NOT NULL AUTO_INCREMENT,
   `nome` varchar(100) NOT NULL,
   `descricao` varchar(500) NOT NULL,
   `unidade` varchar(20) NOT NULL,
