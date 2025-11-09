@@ -32,7 +32,7 @@ document.querySelector('#modal-1 form').addEventListener('submit', function(e) {
         senha: document.getElementById('senha2').value
     };
 
-    fetch('http://localhost:8080/profissionais', {
+    fetch('http://localhost:8080/profissionais/login', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(dados)
