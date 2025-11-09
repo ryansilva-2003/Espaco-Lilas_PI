@@ -29,8 +29,12 @@ public class Profissionais {
     @Column (name = "especialidade", nullable = false)
     private String especialidade;
 
-    @Column (name = "salario", nullable = false)
+    @Column (name = "salario")
     private BigDecimal salario;
+
+    @Column(nullable = false)
+    private String senha;
+
 
     public Integer getId() {
         return id;
@@ -86,5 +90,13 @@ public class Profissionais {
 
     public void setSalario(BigDecimal salario) {
         this.salario = salario;
+    }
+
+    public String getSenha(){
+        return senha;
+    }
+
+    public void setSenha(String senha){
+        this.senha = senha;
     }
 }

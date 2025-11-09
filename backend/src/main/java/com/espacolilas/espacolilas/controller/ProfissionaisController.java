@@ -3,6 +3,7 @@ package com.espacolilas.espacolilas.controller;
 import com.espacolilas.espacolilas.model.Profissionais;
 import com.espacolilas.espacolilas.service.ProfissionaisService;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -28,9 +29,34 @@ public class ProfissionaisController {
         return ResponseEntity.ok(profissionaisService.buscarPorNome(nome));
     }
 
-    @PostMapping
-    public ResponseEntity<Profissionais> criar(@RequestBody Profissionais profissionais) {
+    // Criar profissional via JSON
+    @PostMapping(consumes = "application/json")
+    public ResponseEntity<Profissionais> criarJson(@RequestBody Profissionais profissionais) {
         return ResponseEntity.ok(profissionaisService.salvar(profissionais));
+    }
+
+    // Criar profissional via modal
+    @PostMapping(consumes = "application/x-www-form-urlencoded")
+    public ResponseEntity<Profissionais> criarForm(@ModelAttribute Profissionais profissionais) {
+        return ResponseEntity.ok(profissionaisService.salvar(profissionais));
+    }
+
+    @PostMapping("/login")
+    public ResponseEntity<?> login (@RequestParam String cpf, @RequestParam String senha) {
+        Profissionais profissionais = profissionaisService.buscarPorCpf(cpf);
+
+        if (profissionais == null) {
+            return ResponseEntity.status(401).body("CPF não encontrado");
+        }
+
+        // Verifica senha com BCrypt
+        boolean senhaCorreta = new BCryptPasswordEncoder().matches(senha, profissionais.getSenha());
+
+        if (!senhaCorreta) {
+            return ResponseEntity.status(401).body("Senha incorreta");
+        }
+
+        return ResponseEntity.ok("Login realizado com sucesso");
     }
 
     @PutMapping("/{id}")

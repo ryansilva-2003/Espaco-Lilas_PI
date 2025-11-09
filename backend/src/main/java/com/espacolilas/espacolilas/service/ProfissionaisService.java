@@ -1,5 +1,6 @@
 package com.espacolilas.espacolilas.service;
 
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import com.espacolilas.espacolilas.model.Profissionais;
 import com.espacolilas.espacolilas.repository.ProfissionaisRepository;
 import org.springframework.stereotype.Service;
@@ -23,10 +24,18 @@ public class ProfissionaisService {
         return profissionaisRepository.findByNomeContainingIgnoreCase(nome);
     }
 
+    public Profissionais buscarPorCpf(String cpf) {
+        return profissionaisRepository.findByCpf(cpf);
+    }
+
     public Profissionais salvar(Profissionais profissional) {
         if (profissionaisRepository.existsByCpf(profissional.getCpf())) {
             throw new RuntimeException("Este cpf já está cadastrado!");
         }
+
+        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+        profissional.setSenha(encoder.encode(profissional.getSenha()));
+
         return profissionaisRepository.save(profissional);
     }
 
@@ -40,6 +49,11 @@ public class ProfissionaisService {
         profissionais.setEspecialidade(dadosAtualizados.getEspecialidade());
         profissionais.setSalario(dadosAtualizados.getSalario());
 
+        if (dadosAtualizados.getSenha() != null && !dadosAtualizados.getSenha().isEmpty()) {
+            BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+            profissionais.setSenha(encoder.encode(dadosAtualizados.getSenha()));
+
+        }
         return profissionaisRepository.save(profissionais);
     }
 
@@ -47,3 +61,4 @@ public class ProfissionaisService {
         profissionaisRepository.deleteById(id);
     }
 }
+
