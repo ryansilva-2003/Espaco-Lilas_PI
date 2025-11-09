@@ -19,6 +19,9 @@ public record ProfissionaisRequestDto(
     String telefone,
 
     @NotBlank(message = "Campo obrigatório")
+    String especialidade,
+
+    @NotBlank(message = "Campo obrigatório")
     String senha
 
 ){}

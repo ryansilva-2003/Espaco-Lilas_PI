@@ -1,5 +1,7 @@
 package com.espacolilas.espacolilas.controller;
 
+import com.espacolilas.espacolilas.dto.LoginRequestDto;
+import com.espacolilas.espacolilas.dto.ProfissionaisRequestDto;
 import com.espacolilas.espacolilas.model.Profissionais;
 import com.espacolilas.espacolilas.service.ProfissionaisService;
 import org.springframework.http.ResponseEntity;
@@ -29,10 +31,19 @@ public class ProfissionaisController {
         return ResponseEntity.ok(profissionaisService.buscarPorNome(nome));
     }
 
-    // Criar profissional via JSON
     @PostMapping(consumes = "application/json")
-    public ResponseEntity<Profissionais> criarJson(@RequestBody Profissionais profissionais) {
-        return ResponseEntity.ok(profissionaisService.salvar(profissionais));
+    public ResponseEntity<Profissionais> criar(@RequestBody ProfissionaisRequestDto dto) {
+
+        Profissionais profissional = new Profissionais();
+        profissional.setNome(dto.nome());
+        profissional.setEmail(dto.email());
+        profissional.setCpf(dto.cpf());
+        profissional.setTelefone(dto.telefone());
+        profissional.setEspecialidade(dto.especialidade());
+
+        profissional.setSenha(dto.senha());
+
+        return ResponseEntity.ok(profissionaisService.salvar(profissional));
     }
 
     // Criar profissional via modal
@@ -42,22 +53,23 @@ public class ProfissionaisController {
     }
 
     @PostMapping("/login")
-    public ResponseEntity<?> login (@RequestParam String cpf, @RequestParam String senha) {
+    public ResponseEntity<?> login(@RequestBody LoginRequestDto loginRequestDto) {
+        String cpf = loginRequestDto.cpf().trim();
+        String senha = loginRequestDto.senha().trim();
+
         Profissionais profissionais = profissionaisService.buscarPorCpf(cpf);
 
         if (profissionais == null) {
             return ResponseEntity.status(401).body("CPF não encontrado");
         }
 
-        // Verifica senha com BCrypt
-        boolean senhaCorreta = new BCryptPasswordEncoder().matches(senha, profissionais.getSenha());
-
-        if (!senhaCorreta) {
+        if (!senha.equals(profissionais.getSenha())) {
             return ResponseEntity.status(401).body("Senha incorreta");
         }
 
         return ResponseEntity.ok("Login realizado com sucesso");
     }
+
 
     @PutMapping("/{id}")
     public ResponseEntity<Profissionais> atualizar(@PathVariable Integer id, @RequestBody Profissionais profissionais) {

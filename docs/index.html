@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=close" />
     <title>EspaçoLilás</title>
 </head>
 <body>
@@ -18,12 +19,12 @@
 
             <h2>Login</h2>
 
-            <form id="form-login" action="http://localhost:8080/profissionais/login" method="post">
-                    <label for="text">CPF:</label>
-                    <input type="password" id="cpf" name="cpf">
+            <form id="form-login">
+                    <label for="cpf">CPF:</label>
+                    <input type="text" id="cpf" name="cpf" placeholder="Digite seu cpf">
 
                     <label for="senha">Senha:</label>
-                    <input type="senha" id="senha" name="senha">
+                    <input type="password" id="senha" name="senha" placeholder="Digite sua senha">
 
                     <button type="submit">Entrar</button>
 
@@ -36,30 +37,32 @@
                         <form action="/profissionais" method="POST">
                             <div class="modal-header">
                                 <h1 class="modal-title">Cadastro de usuário</h1>
-                                <button class="close-modal" data-modal="modal-1" type="button">X</button>
+                                <button class="close-modal" data-modal="modal-1" type="button"><span class="material-symbols-outlined">close</span></button>
                             </div>
 
                             <div class="modal-body">
                                 <div class="input-group">
-                                    <label for="nome">Nome</label>
-                                    <input type="text" id="nome" name="nome" required>
+                                    <label for="nome">Nome Completo:</label>
+                                    <input type="text" id="nome" name="nome" placeholder="ex: Ryan Silva" required>
 
-                                    <label for="email">Email</label>
-                                    <input type="email"id="email" name="email" required>
+                                    <label for="email">Email:</label>
+                                    <input type="email"id="email" name="email" placeholder="example@gmail.com" required>
 
-                                    <label for="cpf">CPF</label>
-                                    <input type="text" id="cpf2" name="cpf" required>
+                                    <label for="cpf">CPF:</label>
+                                    <input type="text" id="cpf2" name="cpf" placeholder="ex: 123456789-00" required>
 
-                                    <label for="telefone">Telefone</label>
-                                    <input type="text" id="telefone" name="telefone" required>
+                                    <label for="telefone">Telefone:</label>
+                                    <input type="text" id="telefone" name="telefone" placeholder="ex: (XX) XXXXX-XXXX" required>
 
-                                    <label for="especialidade">Especialidade</label>
-                                    <input type="text" id="especialidade" name="especialidade" required>
+                                    <label for="especialidade">Especialidade:</label>
+                                    <input type="text" id="especialidade" name="especialidade" placeholder="ex: Médica de Estética" required>
 
-                                    <label for="senha">Senha</label>
-                                    <input type="password" id="senha2" name="senha" required>
+                                    <label for="senha">Senha:</label>
+                                    <input type="password" id="senha2" name="senha" placeholder="Digite a senha..." required>
 
+                                    <div class="modal-footer">
                                     <button type="submit">Cadastrar</button> 
+                                    </div>
                                 </div>
                             </div>
                         </form>

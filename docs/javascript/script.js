@@ -32,7 +32,7 @@ document.querySelector('#modal-1 form').addEventListener('submit', function(e) {
         senha: document.getElementById('senha2').value
     };
 
-    fetch('http://localhost:8080/profissionais/login', {
+    fetch('http://localhost:8080/profissionais', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(dados)
@@ -56,18 +56,27 @@ document.querySelector('#modal-1 form').addEventListener('submit', function(e) {
 document.getElementById("form-login").addEventListener("submit", async function(event) {
     event.preventDefault();
 
-    const formData = new FormData(this);
+    const dados = {
+        cpf: document.getElementById('cpf').value.trim(),
+        senha: document.getElementById('senha').value.trim()
+    };
 
-    const response = await fetch("http://localhost:8080/profissionais/login", {
-        method: "POST",
-        body: formData
-    });
+    try {
+        const response = await fetch("http://localhost:8080/profissionais/login", {
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify(dados)
+        });
 
-    if (response.ok) {
-    window.location.href = "home.html";
-    } else {
-        const msg = await response.text();
-        alert("❌ " + msg);
+        if (response.ok) {
+            window.location.href = "home.html";
+        } else {
+            const msg = await response.text();
+            alert("❌ " + msg);
+        }
+    } catch (err) {
+        console.error(err);
+        alert("Erro na conexão com o servidor.");
     }
 });
 

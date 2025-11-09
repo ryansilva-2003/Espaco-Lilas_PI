@@ -33,9 +33,6 @@ public class ProfissionaisService {
             throw new RuntimeException("Este cpf já está cadastrado!");
         }
 
-        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
-        profissional.setSenha(encoder.encode(profissional.getSenha()));
-
         return profissionaisRepository.save(profissional);
     }
 
