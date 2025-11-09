@@ -101,3 +101,22 @@ button:hover{
     font-size: 14px;
     margin: 0;
 }
+
+.open-modal {
+    border: none;
+    background-color: transparent;
+    margin-top: 50px;
+    color: rgb(53, 52, 52);
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: underline;
+    margin-right: 5px;
+    font-size: 0.9rem;
+}
+
+.open-modal:hover {
+    color: #4d8dc2;
+    background-color: transparent;
+}
