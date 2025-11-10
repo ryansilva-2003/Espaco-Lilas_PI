@@ -5,14 +5,13 @@ import com.espacolilas.espacolilas.dto.ProfissionaisRequestDto;
 import com.espacolilas.espacolilas.model.Profissionais;
 import com.espacolilas.espacolilas.service.ProfissionaisService;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("/profissionais")
-@CrossOrigin("*")
+@CrossOrigin(origins = "https://ryansilva-2003.github.io/Espaco-Lilas_PI/")
 public class ProfissionaisController {
 
     private final ProfissionaisService profissionaisService;
