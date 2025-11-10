@@ -1,0 +1,46 @@
+# ======================
+# BACKEND - Java / Spring Boot (IntelliJ)
+# ======================
+
+# Compiled class files
+/backend/target/
+*.class
+
+# IDE IntelliJ
+/backend/.idea/
+/backend/*.iml
+
+# Environment variables
+/backend/.env
+
+# Logs
+/backend/logs/
+*.log
+
+# ======================
+# FRONTEND - Node / JS / HTML / CSS (VS Code)
+# ======================
+
+# Node modules
+/frontend/node_modules/
+
+# Build / dist folders
+/frontend/build/
+/frontend/dist/
+
+# Environment variables
+/frontend/.env
+
+# Logs
+*.log
+
+# ======================
+# DATABASE - MySQL
+# ======================
+
+# Arquivos de dados que não precisam ir para o Git
+/database/*.db
+/database/data/
+
+# Apenas o script SQL de criação/schema deve ser versionado
+# Exemplo: database.sql
