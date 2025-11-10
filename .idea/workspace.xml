@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0613454c-87df-48bb-85c2-d5db7def9781" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/backend/backend/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/database/docs/Produtos.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/database/docs/agendamentos.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/database/docs/css/agendamentos.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/database/docs/css/home.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/database/docs/css/pacientes.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/database/docs/css/produtos.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/database/docs/css/profissionais.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/database/docs/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/database/docs/home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/database/docs/imagens/logo.jfif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/database/docs/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/database/docs/javascript/home.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/database/docs/javascript/pacientes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/database/docs/javascript/profissionais.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/database/docs/javascript/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/database/docs/pacientes.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/database/docs/profissionais.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/database/espaco_lilas_db.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/docs/Produtos.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/docs/agendamentos.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/docs/css/agendamentos.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/docs/css/home.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/docs/css/pacientes.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/docs/css/produtos.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/docs/css/profissionais.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/docs/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/docs/home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/docs/imagens/logo.jfif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/docs/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/docs/javascript/home.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/docs/javascript/pacientes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/docs/javascript/profissionais.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/docs/javascript/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/docs/pacientes.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/docs/profissionais.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/application.properties" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="Record" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/backend" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="34uJW7SMKe304soL7DMYznZo5HW" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.EspacolilasApplication.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Ryan/Desktop/lilas-PI/projeto_EspacoLilas/backend"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="backend" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="backend" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0613454c-87df-48bb-85c2-d5db7def9781" name="Changes" comment="" />
+      <created>1762057551254</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1762057551254</updated>
+    </task>
+    <servers />
+  </component>
+</project>
