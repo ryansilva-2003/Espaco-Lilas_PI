@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/pacientes.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+    <title>Pacientes</title>
+</head>
+<body>
+       <header class="head">
+
+        <img src="./imagens/logo.jfif" id="img">
+
+            <nav class="links">
+                <a href="home.html" class="btnHome">Home</a>
+                <a href="Agendamentos.html" class="btnAgendamentos">Agendamentos</a>
+                <a href="" class="btnPacientes">Pacientes</a>
+                <a href="produtos.html" class="btnProdutos">Produtos</a>
+                <a href="profissionais.html" class="btnProfissionais">Profissionais</a>
+                <a href="index.html" class="sair">
+                <span class="fas fa-power-off power-icon"></span>
+                </a>
+            </nav>
+
+    </header>
+
+    <main>
+
+        <div class="title">Pacientes</div>
+
+        <div class="above-wrapper">
+            <div class="input-box">
+                    <label for="nome">Pesquisar nome do paciente:</label>
+                    <input type="text" id="search" placeholder="Digite aqui...">
+            </div>
+                    <form id="novo-paciente">
+                        <button type="button" class="open-modal" data-modal="modal-1"><span class="material-symbols-outlined">add</span>Novo Paciente</button>
+                    </form>
+
+                    <dialog id="modal-1">
+                        <form action="/pacientes" method="POST">
+                            <div class="modal-header">
+                                <h1 class="modal-title">Novo Paciente</h1>
+                                <button class="close-modal" data-modal="modal-1" type="button"><span class="material-symbols-outlined">close</span></button>
+                            </div>
+
+                            <hr>
+
+                            <div class="modal-body">
+                                <div class="input-group">
+                                    <label for="nome">Nome Paciente:</label>
+                                    <input type="text" id="nome" name="nome" placeholder="ex: Ryan Silva" required>
+
+                                    <label for="email">CPF:</label>
+                                    <input type="email"id="email" name="email" placeholder="ex: 123.456.789-00" required>
+
+                                    <label for="cpf">Email:</label>
+                                    <input type="text" id="cpf2" name="cpf" placeholder="example@gmail.com" required>
+
+                                    <label for="telefone">Telefone:</label>
+                                    <input type="text" id="telefone" name="telefone" placeholder="ex: (XX) XXXXX-XXXX" required>
+
+                                    <label for="especialidade">Data de Nascimento:</label>
+                                    <input type="text" id="especialidade" name="especialidade" placeholder="ex: 01/01/2001" required>
+
+                                    <label for="especialidade">Sexo:</label>
+                                    <input type="text" id="especialidade" name="especialidade" placeholder="ex: M" required>
+
+                                    <label for="especialidade">Observações:</label>
+                                    <div class="obs">
+                                    <textarea type="text" id="especialidade" name="especialidade" placeholder="Alguma observação do paciente?" required></textarea>
+                                    </div>
+
+                                    <div class="modal-footer">
+                                    <button type="submit">Registrar</button> 
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </dialog>
+        </div>
+
+                <div class="wrapper">
+                    <div class="content-wrapper">
+
+                        <div class="title-wrapper">Lista de pacientes</div>
+                            <table width="100%">
+                                <tr>
+                                    <th>Editar</th>
+                                    <th>ID</th>
+                                    <th>Nome</th>
+                                    <th>CPF</th>
+                                    <th>Email</th>
+                                    <th>Telefone</th>
+                                    <th>Data_nascimento</th>
+                                    <th>Sexo</th>
+                                    <th>Observações</th>
+                                    <th>Excluir</th>
+                                </tr>
+
+                                <tr>
+                                    <td><i class="material-icons">edit_square</i></td>
+                                    <td>1</td>
+                                    <td>Tulio</td>
+                                    <td>123456789</td>
+                                    <td>tulio@gmail.com</td>
+                                    <td>11-12345-6789</td>
+                                    <td>01/01/1000</td>
+                                    <td>M</td>
+                                    <td>Alergia a dipirona</td>
+                                    <td><span class="material-symbols-outlined">delete</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><i class="material-icons">edit_square</i></td>
+                                    <td>1</td>
+                                    <td>Tulio</td>
+                                    <td>123456789</td>
+                                    <td>tulio@gmail.com</td>
+                                    <td>11-12345-6789</td>
+                                    <td>01/01/1000</td>
+                                    <td>M</td>
+                                    <td>Alergia a dipirona</td>
+                                    <td><span class="material-symbols-outlined">delete</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><i class="material-icons">edit_square</i></td>
+                                    <td>1</td>
+                                    <td>Tulio</td>
+                                    <td>123456789</td>
+                                    <td>tulio@gmail.com</td>
+                                    <td>11-12345-6789</td>
+                                    <td>01/01/1000</td>
+                                    <td>M</td>
+                                    <td>Alergia a dipirona</td>
+                                    <td><span class="material-symbols-outlined">delete</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><i class="material-icons">edit_square</i></td>
+                                    <td>1</td>
+                                    <td>Tulio</td>
+                                    <td>123456789</td>
+                                    <td>tulio@gmail.com</td>
+                                    <td>11-12345-6789</td>
+                                    <td>01/01/1000</td>
+                                    <td>M</td>
+                                    <td>Alergia a dipirona</td>
+                                    <td><span class="material-symbols-outlined">delete</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td><i class="material-icons">edit_square</i></td>
+                                    <td>1</td>
+                                    <td>Tulio</td>
+                                    <td>123456789</td>
+                                    <td>tulio@gmail.com</td>
+                                    <td>11-12345-6789</td>
+                                    <td>01/01/1000</td>
+                                    <td>M</td>
+                                    <td>Alergia a dipirona</td>
+                                    <td><span class="material-symbols-outlined">delete</span></td>
+                                </tr>
+                            </table>
+                    </div>
+                </div>
+        </div>
+
+        <footer class="footer">
+                <div class="footer_content">
+                    <p>© 2025 Espaço Lilás - Desenvolvido pelo grupo do Projeto Interdisciplinar - FAM - 4°ADS.</p>
+                </div>
+        </footer>
+
+    </main>
+
+</div>
+    <script src="javascript/pacientes.js"></script>
+</body>
+</html>
