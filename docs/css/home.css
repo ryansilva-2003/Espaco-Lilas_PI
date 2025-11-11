@@ -224,7 +224,7 @@ hr {
     padding: 10px;
 }
 
-.obs textarea {
+.observacoes textarea {
     width: 550px;
     height: 100px;
     border-radius: 10px;
@@ -416,3 +416,4 @@ hr {
     text-align: center;
     font-family: Arial, sans-serif;
 }
+

@@ -134,9 +134,152 @@ main {
     margin-top: 30px;
 }
 
-.btnNewProf span {
+.open-modal {
+    margin-right: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.open-modal {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #2e2e2e;
+    font-size: 1.1rem;
+    background: linear-gradient(135deg, #f2f2f2, #d8d8d8);
+    padding: 12px 45px;
+    border-radius: 30px;
+    border: none;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    font-family: 'Montserrat', sans-serif;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.4s ease;
+}
+
+.open-modal:hover {
+    background: linear-gradient(135deg, #ffffff, #c7aebf);
+    color: #000;
+    transform: scale(1.1);
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.25);
+    border: none;
+}
+
+.open-modal span {
     font-size: 1.5rem;
     margin-right: 5px;
+}
+
+dialog::backdrop{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+dialog {
+    border: none;
+    padding: 3px 50px;
+    border-radius: 24px;
+    padding: 20px 45px 20px 30px;
+    height: 800px;
+}
+
+.modal-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: #c7aebf;
+    width: 100%;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+.modal-title{
+    font-size: 1.7rem;
+    color: #5e3a4a;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.close-modal{
+    cursor: pointer;
+    border: none;
+    right: 20px;
+    position: absolute;
+    color: #5e3a4a;
+    transform: scale(1.1);
+    background-color: #c7aebf;
+    transition: transform 0.3s ease;
+}
+
+.close-modal:hover{
+    background-color: #c7aebf;
+    color: #5e3a4a;
+    transform: scale(1.5);
+}
+
+hr {
+    margin-top: 10px;
+}
+
+.modal-body{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.input-group{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input-group label{
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: black;
+    margin-top: 20px;
+}
+
+.input-group input{
+    width: 550px;
+    border-radius: 10px;
+    font-size: 15px;
+    padding: 10px;
+}
+
+.obs textarea {
+    width: 550px;
+    height: 80px;
+    border-radius: 10px;
+    font-size: 15px;
+    padding: 10px;
+    resize: vertical;
+    border: 2px solid black;
+}
+
+
+.modal-footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.modal-footer button {
+    cursor: pointer;
+    background: #1E90FF;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.modal-footer button:hover {
+    background: #1e6495;
 }
 
 .input-box{
@@ -197,7 +340,7 @@ input::placeholder {
 
 th{
     border-radius: 5px;
-    padding: 20px 20px;
+    padding: 20px 60px;
     background-color: #c7aebf;
     font-size: 1.1rem;
 }
@@ -205,31 +348,35 @@ th{
 td{
     text-align: center;
     border-radius: 5px;
-    padding: 10px 10px;
+    padding: 20px 10px;
     background-color: #f8f3f7;
-}
-
-td i{
-    cursor: pointer;
-    transform: scale(0.9);
-    transition: transform 0.5s ease;
-    color: #1f1f1f;
-}
-
-td i:hover {
-    color: #1E90FF;
-    transform: translateY(-2px);
 }
 
 td span{
     cursor: pointer;
     transform: scale(1);
     transition: transform 0.5s ease;
+    color: #1f1f1f;
+    border: none;
+    background-color: transparent;
 }
 
 td span:hover {
+    color: #1E90FF;
+    transform: translateY(-2px) scale(1.3);
+}
+
+td button{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: transform 0.5s ease;
+    background: transparent;
+    border: none;
+}
+
+td button:hover {
     color: #f12323;
-    transform: translateY(-2px);
+    transform: translateY(-2px) scale(1.4);
 }
 
 .footer {

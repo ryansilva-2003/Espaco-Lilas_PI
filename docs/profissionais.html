@@ -38,6 +38,47 @@
                     <label for="nome">Pesquisar nome do profissional</label>
                     <input type="text" id="search" placeholder="Digite aqui...">
             </div>
+
+                    <form id="novo-paciente">
+                        <button type="button" class="open-modal" data-modal="modal-1"><span class="material-symbols-outlined">add</span>Novo Profissional</button>
+                    </form>
+
+                    <dialog id="modal-1">
+                        <form action="/pacientes" method="POST">
+                            <div class="modal-header">
+                                <h1 class="modal-title">Novo Profissional</h1>
+                                <button class="close-modal" data-modal="modal-1" type="button"><span class="material-symbols-outlined">close</span></button>
+                            </div>
+
+                            <hr>
+
+                            <div class="modal-body">
+                                <div class="input-group">
+                                    <label for="nome">Nome do Profissional:</label>
+                                    <input type="text" id="nome" name="nome" placeholder="ex: Ryan Silva" required>
+
+                                    <label for="cpf">CPF:</label>
+                                    <input type="text" id="cpf" name="cpf" placeholder="ex: 123.456.789-00" required>
+
+                                    <label for="email">Email:</label>
+                                    <input type="text" id="email" name="email" placeholder="example@gmail.com" required>
+
+                                    <label for="telefone">Telefone:</label>
+                                    <input type="text" id="telefone" name="telefone" placeholder="ex: (XX) XXXXX-XXXX" required>
+
+                                    <label for="especialidade">Especialidade:</label>
+                                    <input type="text" id="especialidade" name="especialidade" placeholder="ex: Médico" required>
+
+                                    <label for="salario">Salário:</label>
+                                    <input type="text" id="salario" name="salario" placeholder="ex: R$ 0,00" required>
+
+                                    <div class="modal-footer">
+                                    <button type="submit">Registrar</button> 
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </dialog>
         </div>
 
                 <div class="wrapper">
@@ -45,7 +86,6 @@
 
                         <div class="title-wrapper">Lista de profissionais</div>
                             <table width="100%">
-                                <thead>
                                 <tr>
                                     <th>Editar</th>
                                     <th>ID</th>
@@ -57,11 +97,103 @@
                                     <th>Salário R$</th>
                                     <th>Excluir</th>
                                 </tr>
-                                </thead>
-                                <tbody id="profissionais-tbody">
 
+                                <tr>
+                                    <td><span class="material-symbols-outlined">edit_square</span></td>
+                                    <td>1</td>
+                                    <td>Mãe do Matheus</td>
+                                    <td>652.084.902-26</td>
+                                    <td>mae@gmail.com</td>
+                                    <td>(51) 91127-7927</td>
+                                    <td>Dona</td>
+                                    <td>R$15.500,00</td>
+                                    <td><button class="material-symbols-outlined">delete</button></td>
+                                </tr>
 
-                                </tbody>
+                                <tr>
+                                    <td><span class="material-symbols-outlined">edit_square</span></td>
+                                    <td>2</td>
+                                    <td>Matheus</td>
+                                    <td>260.363.966-86</td>
+                                    <td>matheus@gmail.com</td>
+                                    <td>(41)98132-4116</td>
+                                    <td>herdeiro</td>
+                                    <td>R$100.000,00</td>
+                                    <td><button class="material-symbols-outlined">delete</button></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span class="material-symbols-outlined">edit_square</span></td>
+                                    <td>3</td>
+                                    <td>Ryan Silva</td>
+                                    <td>652.084.902-26</td>
+                                    <td>ryan@gmail.com</td>
+                                    <td>(51) 91127-7927</td>
+                                    <td>Diretor Executivo</td>
+                                    <td>R$55.000,00</td>
+                                    <td><button class="material-symbols-outlined">delete</button></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span class="material-symbols-outlined">edit_square</span></td>
+                                    <td>4</td>
+                                    <td>Marcela Costa</td>
+                                    <td>571.320.780-38</td>
+                                    <td>marcela@gmail.com</td>
+                                    <td>(21)91871-9156</td>
+                                    <td>dermatologista</td>
+                                    <td>R$2320,00</td>
+                                    <td><button class="material-symbols-outlined">delete</button></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span class="material-symbols-outlined">edit_square</span></td>
+                                    <td>4</td>
+                                    <td>Tulio Perdigão</td>
+                                    <td>571.320.780-38</td>
+                                    <td>tulio@gmail.com</td>
+                                    <td>(21)91871-9156</td>
+                                    <td>Médico Podólogo</td>
+                                    <td>R$2500,00</td>
+                                    <td><button class="material-symbols-outlined">delete</button></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span class="material-symbols-outlined">edit_square</span></td>
+                                    <td>4</td>
+                                    <td>Gustavo Gabriel</td>
+                                    <td>571.320.780-38</td>
+                                    <td>gagu@gmail.com</td>
+                                    <td>(21)91871-9156</td>
+                                    <td>massoterapeuta</td>
+                                    <td>R$1530,00</td>
+                                    <td><button class="material-symbols-outlined">delete</button></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span class="material-symbols-outlined">edit_square</span></td>
+                                    <td>4</td>
+                                    <td>Luiz</td>
+                                    <td>571.320.780-38</td>
+                                    <td>luiz@gmail.com</td>
+                                    <td>(21)91871-9156</td>
+                                    <td>Chefe de TI</td>
+                                    <td>R$10.230,00</td>
+                                    <td><button class="material-symbols-outlined">delete</button></td>
+                                </tr>
+
+                                <tr>
+                                    <td><span class="material-symbols-outlined">edit_square</span></td>
+                                    <td>4</td>
+                                    <td>Pedro</td>
+                                    <td>571.320.780-38</td>
+                                    <td>pedro@gmail.com</td>
+                                    <td>(21)91871-9156</td>
+                                    <td>designer de cílios</td>
+                                    <td>R$2100,00</td>
+                                    <td><button class="material-symbols-outlined">delete</button></td>
+                                </tr>
+
                             </table>
                     </div>
                 </div>

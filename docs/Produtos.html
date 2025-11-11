@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="css/produtos.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
     <title>Produtos</title>
 </head>
 <body>
@@ -26,6 +28,212 @@
             </nav>
 
     </header>
-    
+    <main>
+
+        <div class="title">Produtos</div>
+
+        <div class="above-wrapper">
+            <div class="input-box">
+                    <label for="nome">Pesquisar nome do produto:</label>
+                    <input type="text" id="search" placeholder="Digite aqui...">
+            </div>
+                    <form id="novo-paciente">
+                        <button type="button" class="open-modal" data-modal="modal-1"><span class="material-symbols-outlined">add</span>Adicionar Produto</button>
+                    </form>
+
+                    <dialog id="modal-1">
+                        <form action="/pacientes" method="POST">
+                            <div class="modal-header">
+                                <h1 class="modal-title">Novo Produto</h1>
+                                <button class="close-modal" data-modal="modal-1" type="button"><span class="material-symbols-outlined">close</span></button>
+                            </div>
+
+                            <hr>
+
+                            <div class="modal-body">
+                                <div class="input-group">
+                                    <label for="nome">Nome Paciente:</label>
+                                    <input type="text" id="nome" name="nome" placeholder="ex: Ryan Silva" required>
+
+                                    <label for="cpf">CPF:</label>
+                                    <input type="cpf" id="cpf" name="cpf" placeholder="ex: 123.456.789-00" required>
+
+                                    <label for="email">Email:</label>
+                                    <input type="text" id="email" name="email" placeholder="example@gmail.com" required>
+
+                                    <label for="telefone">Telefone:</label>
+                                    <input type="text" id="telefone" name="telefone" placeholder="ex: (XX) XXXXX-XXXX" required>
+
+                                    <label for="data_nascimento">Data de Nascimento:</label>
+                                    <input type="date" id="data_nascimento" name="data_nascimento" placeholder="ex: 01/01/2001" required>
+
+                                    <label for="sexo">Sexo:</label>
+                                    <input type="text" id="sexo" name="sexo" placeholder="ex: M" required>
+
+                                    <label for="observacoes">Observações:</label>
+                                    <div class="observacoes">
+                                    <textarea type="text" id="observacoes" name="observacoes" placeholder="Alguma observação do paciente?" required></textarea>
+                                    </div>
+
+                                    <div class="modal-footer">
+                                    <button type="submit">Registrar</button> 
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </dialog>
+        </div>
+
+                <div class="wrapper">
+                    <div class="content-wrapper">
+
+                        <div class="title-wrapper">Lista de pacientes</div>
+                            <table width="100%">
+                                <tr>
+                                    <th>Editar</th>
+                                    <th>ID</th>
+                                    <th>Nome</th>
+                                    <th>CPF</th>
+                                    <th>Email</th>
+                                    <th>Telefone</th>
+                                    <th>Data_nascimento</th>
+                                    <th>Sexo</th>
+                                    <th>Observações</th>
+                                    <th>Excluir</th>
+                                </tr>
+
+                                <tr>
+                                    <td><span class="material-symbols-outlined">
+edit_square
+</span></td>
+                                    <td>1</td>
+                                    <td>Maria Aparecida</td>
+                                    <td>152.706.972-97</td>
+                                    <td>Maria@gmail.com</td>
+                                    <td>(31)99731-9403</td>
+                                    <td>13/09/1994</td>
+                                    <td>F</td>
+                                    <td>Alérgica a dipirona</td>
+                                    <td><span class="material-symbols-outlined">
+delete
+</span></td>
+                                </tr>
+
+                                                              <tr>
+                                    <td><span class="material-symbols-outlined">
+edit_square
+</span></td>
+                                    <td>2</td>
+                                    <td>Lucas Henrique Almeida</td>
+                                    <td>325.036.069-46</td>
+                                    <td>Lucas@gmail.com</td>
+                                    <td>(91)97626-4449</td>
+                                    <td>02/07/1997</td>
+                                    <td>M</td>
+                                    <td>Medo de agulha</td>
+                                    <td><span class="material-symbols-outlined">
+delete
+</span></td>
+                                </tr>
+
+                                                              <tr>
+                                    <td><span class="material-symbols-outlined">
+edit_square
+</span></td>
+                                    <td>3</td>
+                                    <td>Camila Rocha Mendes</td>
+                                    <td>152.706.972-97</td>
+                                    <td>Camila@gmail.com</td>
+                                    <td>(31)99731-9403</td>
+                                    <td>17/01/2001</td>
+                                    <td>F</td>
+                                    <td>Nenhuma</td>
+                                    <td><span class="material-symbols-outlined">
+delete
+</span></td>
+                                </tr>
+
+                                                              <tr>
+                                    <td><span class="material-symbols-outlined">
+edit_square
+</span></td>
+                                    <td>4</td>
+                                    <td>Isabela Pereira Rocha</td>
+                                    <td>152.706.972-97</td>
+                                    <td>Isabela@gmail.com</td>
+                                    <td>(41)90384-6300</td>
+                                    <td>28/10/2005</td>
+                                    <td>F</td>
+                                    <td>Alérgica a dipirona</td>
+                                    <td><span class="material-symbols-outlined">
+delete
+</span></td>
+                                </tr>
+
+                                                              <tr>
+                                    <td><span class="material-symbols-outlined">
+edit_square
+</span></td>
+                                    <td>5</td>
+                                    <td>Maria Aparecida</td>
+                                    <td>152.706.972-97</td>
+                                    <td>Maria@gmail.com</td>
+                                    <td>(31)99731-9403</td>
+                                    <td>09/09/1999</td>
+                                    <td>F</td>
+                                    <td>Lesão no braço esquerdo</td>
+                                    <td><span class="material-symbols-outlined">
+delete
+</span></td>
+                                </tr>
+
+                                                              <tr>
+                                    <td><span class="material-symbols-outlined">
+edit_square
+</span></td>
+                                    <td>6</td>
+                                    <td>Rafael Augusto Pereira Lima</td>
+                                    <td>922.672.274-95</td>
+                                    <td>Rafael@gmail.com</td>
+                                    <td>(21)94717-3698</td>
+                                    <td>02/03/1999</td>
+                                    <td>M</td>
+                                    <td>Toma remédia para diabete</td>
+                                    <td><span class="material-symbols-outlined">
+delete
+</span></td>
+                                </tr>
+
+                                                              <tr>
+                                    <td><span class="material-symbols-outlined">
+edit_square
+</span></td>
+                                    <td>7</td>
+                                    <td>Ana Carolina Ribeiro Silva</td>
+                                    <td>152.706.972-97</td>
+                                    <td>Ana@gmail.com</td>
+                                    <td>(31)99731-9403</td>
+                                    <td>05/12/2002</td>
+                                    <td>F</td>
+                                    <td>Ja realizou cirurgias plásticas</td>
+                                    <td><span class="material-symbols-outlined">
+delete
+</span></td>
+                                </tr>
+                            </table>
+                    </div>
+                </div>
+        </div>
+
+        <footer class="footer">
+                <div class="footer_content">
+                    <p>© 2025 Espaço Lilás - Desenvolvido pelo grupo do Projeto Interdisciplinar - FAM - 4°ADS.</p>
+                </div>
+        </footer>
+
+    </main>
+
+</div>
+    <script src="javascript/pacientes.js"></script>
 </body>
 </html>
